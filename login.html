@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <title> CSS login form</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <form id="form" onsubmit="return validate()" action="welcome.html">
+<div class="login-div">
+    <div class="logo"></div>
+    <div class="title">Current affairs blogger</div>
+    <div class="sub-title">Sai Venkat</div>
+    <div class="fields">
+        <div class="username">
+            <input type="text" id="username" class="user-input" placeholder="username"/>
+        </div>
+            <div class="password">
+                <input type="password" id="password" class="pass-input" placeholder="password"/>
+            </div>
+    </div>
+    <button type="submit" class="signin-button">Login</button>
+    <div class="link">
+        <a href="#">Forget password</a> or 
+        <a href="#">Sign up</a>
+    </div>
+</div>
+    </form>
+</body>
+<script> 
+/* var form=document.getElementById('form')
+ form.addEventListener('submit',function(e){
+e.preventDefault()
+var username=document.getElementById('username').value
+console.log(username)
+var password=document.getElementById('password').value
+console.log(password)
+ })*/
+ function validate()
+ {
+     var username=document.getElementById("username");
+     var password=document.getElementById("password");
+     if(username.value.trim()==""||password.value.trim()=="")
+     {
+         alert("pls fill the empty spaces");
+         return false;
+     }
+     else
+     {
+         true;
+     }
+ }
+</script>
+</html>
